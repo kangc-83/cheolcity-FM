@@ -30,6 +30,7 @@ jobs:
             --exclude='.env' \
             --include='**/.env.example' \
             --exclude='.env.*' \
+            --exclude='.github/workflows/ci.yml' \
             /tmp/cheolcity-source/ ./
       - name: Commit source
         run: |
