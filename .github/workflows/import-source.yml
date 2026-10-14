@@ -21,15 +21,15 @@ jobs:
         run: |
           mkdir -p /tmp/cheolcity-source
           unzip -q /tmp/cheolcity-source.zip -d /tmp/cheolcity-source
-          rsync -a --delete \
+          rsync -a \
             --exclude='.git/' \
             --exclude='node_modules/' \
             --exclude='.tanstack/' \
             --exclude='.wrangler/' \
             --exclude='dist/' \
             --exclude='.env' \
+            --include='**/.env.example' \
             --exclude='.env.*' \
-            --exclude='!.env.example' \
             /tmp/cheolcity-source/ ./
       - name: Commit source
         run: |
