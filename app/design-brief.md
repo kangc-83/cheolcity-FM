@@ -1,0 +1,21 @@
+# Cheol City Football Manager — Design Brief
+
+- **Design read:** A Korean amateur football club's matchday operations console, designed for volunteer managers and members who need clarity and speed more than spectacle.
+- **Concept spine:** Precision instrument. Every surface feels like a well-calibrated matchday control desk: measured grids, clean labels, clear states, and dependable data.
+- **Delivery tier:** editorial. A calm, high-utility product interface with restrained transitions and no decorative motion.
+- **Animation mode:** non-animated — user picked Non-animated at intake; prefers a practical management interface over a cinematic scroll experience.
+- **Theme paradigm:** Pristine Light with cool porcelain, ink navy, and one decisive cobalt accent.
+- **Background character:** Solid cool-white surfaces with a fine technical grid and occasional monochrome pitch-line details.
+- **Typography character:** Satoshi-like clean grotesk paired with a compact mono for numbers and match metadata.
+- **Locked palette:** Porcelain `#F5F7F8`, white `#FFFFFF`, ink navy `#17283F`, slate `#627184`, steel `#DCE3EA`, cobalt `#315BCB`. Cobalt is the only accent; it signals active choices and primary actions without neon glow.
+- **Locked type:** Satoshi / Geist-style sans with Geist Mono for scores, shirt numbers, and small operational metadata. No serif.
+- **Hero architecture:** A direct operational dashboard, not a marketing hero. Compact club masthead and matchday status strip above the working dashboard.
+- **Section plan:** 1) Overview dashboard using asymmetric bento rhythm; 2) player roster using Swiss table discipline; 3) attendance and fixtures using a horizontal date rail and schedule list; 4) team assignment using split roster columns and a balance rail; 5) match recording using a score header and event ledger; 6) player/season statistics using an oversized metrics strip and ranked table; 7) settings and backup using a compact utility layout.
+- **Signature components:** compact shirt-number tile; match scoreline header; split team roster columns; narrow season metrics strip.
+- **Narrative spine motif:** fine pitch boundary lines and calibrated number labels, used sparingly as separators rather than decorative stadium art.
+- **Second-read moment:** one oversized season numeral used as a structural anchor on the season statistics page.
+- **Corner language:** one consistent 12px radius for interactive surfaces, with square table rows and thin dividers.
+- **CTA inventory:** “새 선수” opens a focused roster form; “모임 등록” creates a gathering; “자동 편성” computes a candidate; “팀 확정” saves the final assignment; “기록 저장” commits the match result; “내보내기” downloads the selected data. Each action has a distinct placement and interaction role.
+- **Responsive behavior:** desktop uses a fixed slim sidebar and wide content canvas; tablet collapses the sidebar to icon-and-label navigation; mobile uses a compact top bar and bottom navigation, stacks bento modules, and converts roster tables to readable rows.
+- **Product behavior:** Korean-first UI; Asia/Seoul dates; admin/member roles; members can update only their own attendance; administrators manage players, gatherings, fixtures, teams, scores, and accounts.
+- **Visual asset note:** Higgsfield image generation is unavailable on the current account tier. Use an original vector club mark, bespoke SVG social artwork, and CSS pitch-line details rather than stock imagery or fabricated team photography.

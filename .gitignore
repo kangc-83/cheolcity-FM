@@ -1,0 +1,18 @@
+node_modules/
+**/node_modules/
+**/dist/
+**/.wrangler/
+**/.env
+**/.env.*
+!**/.env.example
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+cheolcity-private-data-backup*
+cheolcity-full-database-backup.json
+cheolcity-restore.sql
+# Vercel / Turso
+.vercel/
+.env.local
+.env.*.local
