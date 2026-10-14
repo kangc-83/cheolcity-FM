@@ -1,0 +1,44 @@
+name: Import Vercel migration source
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Download prepared source archive
+        run: |
+          curl --fail --location --silent --show-error \
+            'https://d2ol7oe51mr4n9.cloudfront.net/user_3J9wAR2mOAXrwmrlkbBPBBLp7rK/3045b2d3-df9e-4f5e-a47c-6f7d029a0768.zip' \
+            --output /tmp/cheolcity-source.zip
+      - name: Extract source files
+        run: |
+          mkdir -p /tmp/cheolcity-source
+          unzip -q /tmp/cheolcity-source.zip -d /tmp/cheolcity-source
+          rsync -a --delete \
+            --exclude='.git/' \
+            --exclude='node_modules/' \
+            --exclude='.tanstack/' \
+            --exclude='.wrangler/' \
+            --exclude='dist/' \
+            --exclude='.env' \
+            --exclude='.env.*' \
+            --exclude='!.env.example' \
+            /tmp/cheolcity-source/ ./
+      - name: Commit source
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No source changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Import Vercel migration source'
+          git push
